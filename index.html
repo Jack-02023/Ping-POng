@@ -3,6 +3,8 @@
 <html>
     <head>
         <title>Ping Pong</title>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +15,9 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>   
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>
+
 
     </head>
     <body background="https://wallpapercave.com/wp/wp4012911.jpg">
@@ -23,7 +27,6 @@
               <nav>
                 <ul>
                   <li><button class="item" id="status">Status</button></li>
-                  <li><button class="item" onclick="start()" id="start">Start</button></li>
                   <li><button class="item" data-toggle="modal" data-target="#popUp">Instruction</button></li>
                   <li><button class="item reset" onclick="reset();">Restart</button></li>
                 </ul>
@@ -45,6 +48,7 @@
                 </div>
               </div>
             </div>
+            <div class="canvas"></div>
           </center>
         <script src="main.js"></script>
     </body>
