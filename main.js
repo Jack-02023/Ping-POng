@@ -9,7 +9,7 @@ var paddle2Y = 685,paddle2Height = 70;
 var score1 = 0, score2 =0;
 var paddle1Y;
 
-var  playerscore =0;
+var playerscore =0;
 var audio1;
 var pcscore =0;
 //ball x and y and speedx speed y and radius
@@ -20,16 +20,30 @@ var ball = {
     dx:3,
     dy:3
 }
+function preload() {
 
+}
 function setup(){
-  var canvas =  createCanvas(700,400);
+  canvas = createCanvas(700,400);
   canvas.position(300, 180)
+  video = createCapture(VIDEO)
+  video.hide()
+
+	poseNet = ml5.poseNet(video, () => console.log("loaded"));
+	poseNet.on('pose', gotPose);
 }
 
+function gotPose(results) {
+  if(results.length > 0){
+		x = results[0].pose.nose.x
+		y = results[0].pose.nose.y
+    console.log(results)
+	}
+}
 
 function draw(){
-
- background(0); 
+  background(0, 0, 0)
+//  image(video, 0, 0, 700, 400)
 
  fill("black");
  stroke("black");
@@ -123,7 +137,6 @@ function move(){
   else{
     pcscore++;
     reset();
-    navigator.vibrate(100);
   }
 }
 if(pcscore ==4){
