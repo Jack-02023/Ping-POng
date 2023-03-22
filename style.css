@@ -1,70 +1,70 @@
 * {
-    font-family: 'Itim', cursive;
-    box-sizing: border-box;
-    color: white;
-    border: 0;
-    padding: 0;
-    font-size:x-large;
+  font-family: 'Itim', cursive;
+  box-sizing: border-box;
+  color: white;
+  border: 0;
+  padding: 0;
+  font-size:x-large;
 }
 .heading {
-    display: flex;
-    justify-content:space-between;
+  display: flex;
+  justify-content:space-between;
 }
 .heading h1 {
-    text-transform: uppercase;
-    color: white;
-    margin-left:2vw;
+  text-transform: uppercase;
+  color: white;
+  margin-left:2vw;
 }
 nav {
-    float: right;
-  }
-  
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  float: right;
 }
-  
-  nav li {
-    display: inline-block;
-    margin-left: 70px;
-    position: relative;
-  }
-  
-  nav a {
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav .item:hover, h1:hover {
+    transform: scale(1.1);
     color: white;
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
-  }
-  
-  nav .item:hover, h1:hover {
-      transform: scale(1.1);
-      color: white;
-      text-decoration: none;
-  }
-  
-  nav .item::before {
-    content: '';
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    height: 5px;
-    background: white;
-    position: absolute;
-    transform: scaleX(0);
-    transition: all ease-in-out 250ms;
-  }
-  
-  nav .item:hover::before,
-  nav .item:focus::before{
-    transform: scaleX(1);
-    cursor: pointer;
-  
-  }
+}
+
+nav .item::before {
+  content: '';
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: 5px;
+  background: white;
+  position: absolute;
+  transform: scaleX(0);
+  transition: all ease-in-out 250ms;
+}
+
+nav .item:hover::before,
+nav .item:focus::before{
+  transform: scaleX(1);
+  cursor: pointer;
+
+}
 button {
-    background: none;
-    border: none;
+  background: none;
+  border: none;
 
 }
