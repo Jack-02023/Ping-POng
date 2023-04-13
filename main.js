@@ -165,7 +165,7 @@ if(pcscore ==4){
     stroke("white");
     textSize(25)
     text("Game Over!☹☹",width/2,height/2);
-    text("Reload The Page!",width/2,height/2+30)
+    text("Press Restart to continue",width/2,height/2+30)
     miss.play()
     noLoop();
     pcscore = 0;
